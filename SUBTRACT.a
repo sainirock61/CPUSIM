@@ -6,3 +6,28 @@ INC
 ADD A
 OUT
 A: .data 1 0
+
+
+
+
+<!ATTLIST Decode name CDATA #REQUIRED ir IDREF #REQUIRED id ID #REQUIRED>
+
+<!ELEMENT IO EMPTY >
+
+<!ATTLIST IO name CDATA #REQUIRED direction (input | output) #REQUIRED type (integer | ascii | unicode) #REQUIRED buffer IDREF #REQUIRED connection CDATA #IMPLIED id ID #REQUIRED>
+
+<!ELEMENT MemoryAccess EMPTY >
+
+<!ATTLIST MemoryAccess name CDATA #REQUIRED direction (read | write ) #REQUIRED memory IDREF #REQUIRED data IDREF #REQUIRED address IDREF #REQUIRED id ID #REQUIRED>
+
+<!ELEMENT SetCondBit EMPTY >
+
+<!ATTLIST SetCondBit name CDATA #REQUIRED bit IDREF #REQUIRED value (0 | 1) #REQUIRED id ID #REQUIRED>
+
+<!ELEMENT End EMPTY>
+
+<!ATTLIST End id ID #REQUIRED>
+
+<!ELEMENT Comment EMPTY>
+
+<!ATTLIST Comment name CDATA #REQUIR
